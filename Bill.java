@@ -36,6 +36,18 @@ public class Bill {
                   }
                   total = total / rate;
             }
+            in_usd = true;
+      }
+
+       public void convertToSyrianPound(double rate) {
+            if (in_usd) {
+                  if (rate <= 0) {
+                        System.out.println("Invalid exchange rate. Conversion failed.");
+                        return;
+                  }
+                  total = total * rate;
+            }
+            in_usd = false;
       }
 
       private int getIdFromServer(int store_id, int cust_id) {

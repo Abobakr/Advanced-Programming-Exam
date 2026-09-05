@@ -1,10 +1,10 @@
 // inside App.java file
 public class App {
-      public static final double EXCH_RATE = 14000; // 1 dollar = 14000 SYP
+      public static final double EXCH_RATE = 130; // 1 dollar = 130 SYP
 
       public static void main(String[] args) {
-            Bill bill_1 = new Bill(10, 13, 792, "2026-02-28", 14000, true);
-            Bill bill_2 = new Bill(11, 14, 793, "2026-03-01", 2800000, false);
+            Bill bill_1 = new Bill(10, 13, 792, "2026-02-28", 130, true);
+            Bill bill_2 = new Bill(11, 14, 793, "2026-03-01", 260, false);
 
             bill_1.convertToDollar(EXCH_RATE);
             bill_2.convertToDollar(0); // Invalid exchange rate, conversion should fail
